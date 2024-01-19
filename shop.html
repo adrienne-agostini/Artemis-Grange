@@ -2,9 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Artemis Grange</title>
+<title>Shop</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/shop.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script defer src="js/shopService.js"></script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init("yVIwea7CQey07bGyj");
+		})();
+	</script>
 </head>
 <body>
 	<header>
@@ -23,44 +33,66 @@
 		<!-- <h3><a href="contact.html">Contact</a> |</h3> -->
 		<!-- <h3><a href="extras.html">Extras</a></h3> -->
 	</nav>
-	<section id="home-hero-wrapper">
-		<img id="floral-hero-image" alt="bridal and bridesmaid bouquets" src="images/herofloral.jpg">
-	</section>
-	<section id="banner-wrapper">
-			<div id="banner"><h3>Designing Fragrant Floral Dreamscapes</h3></div></section>
-	<main id="home-main-wrapper">
-		<aside id="about-image-wrapper">
-			<div id="image-border">
-				<img id="about-image" alt="about me" src="images/about-me.jpg">
+	<main>
+		<article id="shop-article">
+			<h2>Shop</h2>
+			<div id="shop-banner">
+			<p>Welcome to our Floral Shop, we are offering Valentine's Day arrangements. Make your selection and we will contact you for details on payment and delivery timeframes.</p>
 			</div>
-			
-		</aside>
-		<article id="about-article">
-			<h2>About Me</h2>
-			<h3>Hi I'm Adrienne!</h3>
-				<p>The heart and soul behind the florals that weave stories into life's most extraordinary moments. What sets our family farm Artemis Grange apart is not just the flowers we grow but the artistry we bring to each arrangement. Whether it's for a wedding, a special event, or simply to brighten someone's day, our floral creations are a symphony of colors, textures, and fragrances. Every bouquet is a masterpiece, handcrafted with love and a keen eye for design. </p>
 		</article>
-	</main>
-	<!-- <section id="subscribe-wrapper">
-		<div id="text-border">
-			<div id="subscribe-text">
-				<h3>Subscribe to Our Newsletter</h3>
-				<p>Sign up for our newsletter to stay up to date.</p>
-			</div>
-		</div>
-		<form id="subscribe-form">
-			<input type="email" placeholder="Email address">
-			<input type="submit" value="Subscribe" id="subscribe-submit">
-		</form>
-	</section> -->
-	<section id="follow-banner">
-		<div id="text-border">
-			<div id="subscribe-text">
-				<h3>Follow along</h3>
-				<p>@Artemisgrangeflowers</p>
-			</div>
-		</div>
-	</section>
+		<section id="shop-section">
+			<form id="form">
+				<div class="field">
+				  <label for="name" class="form-label"><p>Name</p></label>
+				  <input type="text" name="name" id="name">
+				</div>
+				<div class="field">
+				  <label for="email" class="form-label"><p>Email</p></label>
+				  <input type="text" name="email" id="email">
+				</div>
+				<div class="field">
+				  <label for="delivery-date" class="form-label"><p>Delivery Date</p></label>
+				  <input type="date" min="2024-02-12" max="2024-02-18" name="delivery-date" id="delivery-date">
+				</div>
+				<div class="field" id="flower-field">
+					<p class="card-title">Please select one of the following options</p>
+					<div class="radio-wrapper">
+						<label>
+							<input type="radio" name="selection" class="flower-radio" id="blushing" value="blushing" />
+								<div class="card"> 
+								<p>Blushing Love</p>
+								<p>$110</p>
+
+								<img src="images/shop/Valenties-2024/Blushing-Love.jpg"/>
+								</div>
+						</label>
+					</div>
+					<div class="radio-wrapper">
+						<label>
+							<input type="radio" name="selection" class="flower-radio" id="cupids" value="cupids"  />
+							<div class="card"> 
+								<p>Cupid's Canvas</p>
+								<p>$90</p>
+							<img src="images/shop/Valenties-2024/Cupid's-Canvas.jpg"/>
+							</div>
+						</label>
+					</div>
+					<div class="radio-wrapper">
+						<label>
+							<input type="radio" name="selection" class="flower-radio" id="romantic" value="romantic" />
+							<div class="card"> 
+								<p>Romantic Petal Palette</p>
+								<p>$75</p>
+								<img src="images/shop/Valenties-2024/Romantic-Petal-Palette.jpg"/>
+							</div>	
+						</label>
+					</div>
+				</div>
+			  
+				<input type="submit" id="shop-submit" value="Send Email" >
+			  </form>
+		</section>
+		</main>
 	<footer>
 		<p class="copyright-text">Copyright &copy; 2023 Adrienne Agostini. All rights reserved.</p>
 		<table class="footer-table">

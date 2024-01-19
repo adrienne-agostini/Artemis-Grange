@@ -191,16 +191,6 @@ p {
 	width: 500px;
 	text-align: center;
 }
-#gallery-article h2 {
-	color: #F9B2CE;
-	text-shadow: 2px 2px 0px #A60243, 
-                  4px 4px 0px #F20262
-}
-#gallery-article {
-	margin: 30px 0;
-	width: 100%;
-	text-align: center;
-}
 #subscribe-wrapper {
 	background-image: url("../images/subscribe-image.jpg");
 	background-size: cover;
@@ -334,7 +324,7 @@ th{
 }
 
 /* Smartphones */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 	footer {
 		flex-wrap: wrap;
 		flex-direction: column-reverse;
